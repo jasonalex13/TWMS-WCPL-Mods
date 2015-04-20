@@ -1,7 +1,10 @@
-// @name            Upload Paperwork Page Mods
-// @description     Adds Styles to the Upload Paperwork Page on Damstra TWMS for ease of use by WSF CURRAGH
-// @author          Jason Hill <info@jasonalex.net>
-// @version         1.1.5
+// NAME			Upload Paperwork Page Mods
+// DESCRIPTION		Adds Styles to the Upload Paperwork Page on Damstra TWMS for ease of use by WSF CURRAGH
+//
+// AUTHOR		Jason Hill <info@jasonalex.net>
+// COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
+//
+// VERSION		1.1.5
 
 
 if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
