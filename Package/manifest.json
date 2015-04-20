@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "WCPL-TWMS Mods",
+	"version": "1.0.8.2",
+	
+	"page_action":{
+		"default_icon":{
+			"19": "icons/icon19.png",
+			"38": "icons/icon38.png"
+			},
+		"default_title": "WCPL TWMS"
+	},
+	
+	"author": "jasonalex",
+	
+	"description": "Modifications to the TWMS front-end for WCPL users",
+	"icons": { "16": "icons/icon16.png",
+              "32": "icons/icon32.png",
+              "48": "icons/icon48.png",
+              "128": "icons/icon128.png" },
+
+	"content_scripts": [
+    {
+      "matches": ["https://damstra.com.au/damstra/*","https://www.damstra.com.au/damstra/*"],
+	  "all_frames": true,
+      "js": ["js/jquery-2.1.3.min.js","js/base.js","js/AddPaperworkStyles.js","js/ProfilePage.js"]
+    }
+	],
+	
+	"web_accessible_resources": [
+		"images/*.png"
+	]
+}
