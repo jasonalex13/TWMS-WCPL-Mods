@@ -1,4 +1,10 @@
-// @author          Jason Hill <info@jasonalex.net>
+// NAME			TWMS-WCPL-Mods BASE JS
+// DESCRIPTION		declares functions and variables and does the stuff that gets applied to all TWMS pages
+//
+// AUTHOR		Jason Hill <info@jasonalex.net>
+// COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
+//
+// VERSION		1.0.0
 
 function urlencode(str) {
   //       discuss at: http://phpjs.org/functions/urlencode/
