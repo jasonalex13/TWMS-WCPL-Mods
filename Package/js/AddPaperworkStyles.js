@@ -1,24 +1,8 @@
-// ==UserScript==
-// @name            TWMS Upload Paperwork Styles
+// @name            Upload Paperwork Page Mods
 // @description     Adds Styles to the Upload Paperwork Page on Damstra TWMS for ease of use by WSF CURRAGH
-// @icon            https://raw.githubusercontent.com/jasonalex13/TWMS-PaperworkStyle/master/logo.png
-//
 // @author          Jason Hill <info@jasonalex.net>
-// @namespace       http://github.com/jasonalex13
-
-//
-// @copyright       Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
-//
-// @match https://damstra.com.au/damstra/paperworkportal.asp
-// @match https://www.damstra.com.au/damstra/paperworkportal.asp
-//
-// @require         http://code.jquery.com/jquery-1.8.0.min.js
-//
 // @version         1.1.5
-//
-// @run-at			document-end
-// @unwrap
-// ==/UserScript==
+
 
 if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
 	var PaperworkPriority = 0
