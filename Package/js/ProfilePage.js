@@ -21,7 +21,7 @@
 // ==/UserScript==
 
 
-if(currentPageURL == urlencode("https://damstra.com.au/damstra/skills.asp")) {
+if(currentPageURL == urlencode("https://damstra.com.au/damstra/skills.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/skills.asp")) {
 	addGlobalStyle("body > table:nth-child(18) > tbody > tr > td > table > tbody > tr > td:nth-child(6), body > table:nth-child(18) > tbody > tr > td > table > thead > tr > th:nth-child(5) {display:none;}");
 	addGlobalStyle("body > table:nth-child(18) > tbody > tr > td > table > tbody > tr > td:nth-child(2) {width:250px;}");
 	addGlobalStyle("body > table:nth-child(18) > tbody > tr > td > table > tbody > tr > td:nth-child(5) > select {width:120px;}");
