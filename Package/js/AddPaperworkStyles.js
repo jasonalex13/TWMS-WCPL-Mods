@@ -4,6 +4,8 @@
 // AUTHOR		Jason Hill <info@jasonalex.net>
 // COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
+// PRE-REQ		base.js
+//
 // VERSION		1.1.5
 
 
