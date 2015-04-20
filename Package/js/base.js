@@ -63,8 +63,8 @@ function addGlobalStyle(css) {
 var redflagimgURL = chrome.extension.getURL("images/redflag.png");
 var validimgURL = chrome.extension.getURL("images/valid.png");
 var invalidimgURL = chrome.extension.getURL("images/invalid.png");
-var attachmentimgURL = chrome.extension.getURL("images/docattachment.png");
+var TWMSimgURL = chrome.extension.getURL("images/TWMS-heart.png");
 $('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/redflag.gif', redflagimgURL); });
 $('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/valid.png', validimgURL); });
-$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/invalid.png', invalidimgURL); });
-$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/document_attachment.png', attachmentimgURL); });	
+$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/invalid.png', invalidimgURL); });	
+$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/DMSl.png', TWMSimgURL); });

@@ -1,15 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "WCPL-TWMS Mods",
-	"version": "1.0.8.2",
-	
-	"page_action":{
-		"default_icon":{
-			"19": "icons/icon19.png",
-			"38": "icons/icon38.png"
-			},
-		"default_title": "WCPL TWMS"
-	},
+	"version": "1.0.9",
 	
 	"author": "jasonalex",
 	
@@ -26,6 +18,14 @@
       "js": ["js/jquery-2.1.3.min.js","js/base.js","js/AddPaperworkStyles.js","js/ProfilePage.js"]
     }
 	],
+	
+	"page_action":{
+		"default_icon":{
+			"19": "icons/icon19.png",
+			"38": "icons/icon38.png"
+			},
+		"default_title": "WCPL TWMS"
+	},
 	
 	"web_accessible_resources": [
 		"images/*.png"

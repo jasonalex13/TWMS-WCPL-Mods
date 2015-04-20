@@ -14,7 +14,7 @@
 //
 // @require         http://code.jquery.com/jquery-1.8.0.min.js
 //
-// @version         1.0.9.3
+// @version         1.1.1
 //
 // @run-at			document-end
 // @unwrap
@@ -32,4 +32,7 @@ if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.a
 			$(this).parent().css('background-color','#f4959f');
 		}
 	}); 	
+	
+	var attachmentimgURL = chrome.extension.getURL("images/docattachment.png");
+	$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/document_attachment.png', attachmentimgURL); })
 }
