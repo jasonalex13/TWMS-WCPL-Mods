@@ -1,24 +1,11 @@
-// ==UserScript==
-// @name            TWMS Upload Paperwork Styles
-// @description     Adds Styles to the Upload Paperwork Page on Damstra TWMS for ease of use by WSF CURRAGH
-// @icon            https://raw.githubusercontent.com/jasonalex13/TWMS-PaperworkStyle/master/logo.png
+// @name            Profile Page Mods
+// @description     Adds Styles to the Employee Profile on Damstra TWMS for ease of use by WSF CURRAGH
 //
 // @author          Jason Hill <info@jasonalex.net>
-// @namespace       http://github.com/jasonalex13
-
-//
 // @copyright       Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// @match https://damstra.com.au/damstra/paperworkportal.asp
-// @match https://www.damstra.com.au/damstra/paperworkportal.asp
-//
-// @require         http://code.jquery.com/jquery-1.8.0.min.js
-//
-// @version         1.1.0
-//
-// @run-at			document-end
-// @unwrap
-// ==/UserScript==
+// @version         1.1.1
+
 
 
 if(currentPageURL == urlencode("https://damstra.com.au/damstra/skills.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/skills.asp")) {
