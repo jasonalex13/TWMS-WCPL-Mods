@@ -1,12 +1,12 @@
-// @name            Profile Page Mods
-// @description     Adds Styles to the Employee Profile on Damstra TWMS for ease of use by WSF CURRAGH
+// NAME			Profile Page Mods
+// DESCRIPTION		Adds Styles to the Employee Profile on Damstra TWMS for ease of use by WSF CURRAGH
 //
-// @author          Jason Hill <info@jasonalex.net>
-// @copyright       Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
+// AUTHOR		Jason Hill <info@jasonalex.net>
+// COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// @version         1.1.1
-
-
+// PRE-REQ		base.js
+//
+// VERSION		1.1.1
 
 if(currentPageURL == urlencode("https://damstra.com.au/damstra/skills.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/skills.asp")) {
 	addGlobalStyle("body > table:nth-child(18) > tbody > tr > td > table > tbody > tr > td:nth-child(6), body > table:nth-child(18) > tbody > tr > td > table > thead > tr > th:nth-child(5) {display:none;}");
