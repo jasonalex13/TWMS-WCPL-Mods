@@ -14,13 +14,13 @@
 //
 // @require         http://code.jquery.com/jquery-1.8.0.min.js
 //
-// @version         1.1.4
+// @version         1.1.5
 //
 // @run-at			document-end
 // @unwrap
 // ==/UserScript==
 
-if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.asp")) {
+if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
 	var PaperworkPriority = 0
 	
 	if(getCookie("PaperworkPriority") != "")
