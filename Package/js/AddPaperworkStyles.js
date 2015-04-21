@@ -6,10 +6,10 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		1.1.5
+// VERSION		1.2
 
 
-if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
+if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkportal.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
 	var PaperworkPriority = 0
 	
 	if(getCookie("PaperworkPriority") != "")
@@ -31,7 +31,7 @@ if(currentPageURL == urlencode("https://damstra.com.au/damstra/paperworkportal.a
 	}); 	
 	
 	var attachmentimgURL = chrome.extension.getURL("images/docattachment.png");
-	$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/document_attachment.png', attachmentimgURL); })
+	$('img').prop('src', function(_,src) { return src.replace('https://" + currentDomain + "/damstra/images/document_attachment.png', attachmentimgURL); })
 	
 	document.getElementById("Priority").addEventListener('change',function(){
 		PaperworkPriority = document.getElementById("Priority").value;
