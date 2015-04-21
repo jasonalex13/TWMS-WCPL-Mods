@@ -6,6 +6,7 @@
 //
 // VERSION		1.0.0
 
+// Code to encode URLs
 function urlencode(str) {
   //       discuss at: http://phpjs.org/functions/urlencode/
   //      original by: Philip Peterson
@@ -46,6 +47,9 @@ function urlencode(str) {
     .replace(/\*/g, '%2A')
     .replace(/%20/g, '+');
 }
+
+// save the domain to a variable
+currentDomain = document.domain;
 
 //save cookies
 function setCookie(cname, cvalue, exdays) {
@@ -90,7 +94,7 @@ var redflagimgURL = chrome.extension.getURL("images/redflag.png");
 var validimgURL = chrome.extension.getURL("images/valid.png");
 var invalidimgURL = chrome.extension.getURL("images/invalid.png");
 var TWMSimgURL = chrome.extension.getURL("images/TWMS-heart.png");
-$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/redflag.gif', redflagimgURL); });
-$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/valid.png', validimgURL); });
-$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/invalid.png', invalidimgURL); });	
-$('img').prop('src', function(_,src) { return src.replace('https://damstra.com.au/damstra/images/DMSl.png', TWMSimgURL); });
+$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/redflag.gif', redflagimgURL); });
+$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/valid.png', validimgURL); });
+$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/invalid.png', invalidimgURL); });	
+$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/DMSl.png', TWMSimgURL); });
