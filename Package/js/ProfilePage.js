@@ -16,5 +16,5 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/skills.asp
 
 	//They use blue buttons on this page so i'm going to make the attachment icon white
 	var attachmentimgURL = chrome.extension.getURL("images/docattachmentwhite.png");
-	$('img').prop('src', function(_,src) { return src.replace('https://" + currentDomain + "/damstra/images/document_attachment.png', attachmentimgURL); });	
+	$('img').prop('src', function(_,src) { return src.replace("https://" + currentDomain + "/damstra/images/document_attachment.png", attachmentimgURL); });	
 }
