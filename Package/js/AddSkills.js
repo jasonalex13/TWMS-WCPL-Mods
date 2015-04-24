@@ -6,14 +6,13 @@
 //
 // PRE-REQ				base.js
 //
-// VERSION				0.1
+// VERSION				1.2
 
-if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/include/panels/AddSkills.asp")) {
-	
-	
-	document.getElementById("MINE_ID").value = "WSF CURRAGH";
-	addGlobalStyle('input[type="file"] {width:400px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px;}');
 
-	
-	
+if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/include/panels/AddSkills.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
+  document.getElementById("MINE_ID").onchange = "InitSkills(this.value);"; 
+  document.getElementById("MINE_ID").onblur = "";   
+  document.getElementById("MINE_ID").value = "WSF CURRAGH";
+  addGlobalStyle('input[type="file"] {width:400px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px;}');
+
 }
