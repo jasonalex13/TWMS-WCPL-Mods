@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "WCPL-TWMS Mods",
-	"version": "1.2.1",
+	"version": "1.3.0",
 	
 	"author": "jasonalex",
 	
@@ -15,7 +15,7 @@
     {
       "matches": ["https://damstra.com.au/damstra/*","https://www.damstra.com.au/damstra/*"],
 	  "all_frames": true,
-      "js": ["js/jquery-2.1.3.min.js","js/base.js","js/AddPaperworkStyles.js","js/ProfilePage.js"]
+      "js": ["js/jquery-2.1.3.min.js","js/base.js","js/AddPaperwork.js","js/ProfilePage.js","js/AddSkills.js"]
     }
 	],
 	
