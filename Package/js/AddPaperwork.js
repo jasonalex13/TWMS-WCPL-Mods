@@ -27,6 +27,9 @@ function ShowOnlyRejectedFunction(checkval) {
 }
 
 if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkportal.asp") || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
+	var attachmentimgURL = chrome.extension.getURL("images/docattachment.png");
+	$('img').prop('src', function(_,src) { return src.replace("https://" + currentDomain + "/damstra/images/document_attachment.png", attachmentimgURL); });
+	
 	var PaperworkPriority = 0
 	
 	// if the paperwork priority can be found in a cookie, use it
@@ -71,9 +74,6 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkp
 			$(this).parent().css('background-color','#f4959f');
 		}
 	}); 	
-	
-	var attachmentimgURL = chrome.extension.getURL("images/docattachment.png");
-	$('img').prop('src', function(_,src) { return src.replace('https://" + currentDomain + "/damstra/images/document_attachment.png', attachmentimgURL); })
 	
 	document.getElementById("Priority").addEventListener('change',function(){
 		PaperworkPriority = document.getElementById("Priority").value;
