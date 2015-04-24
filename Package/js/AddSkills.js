@@ -6,5 +6,14 @@
 //
 // PRE-REQ				base.js
 //
-// VERSION				1.2
+// VERSION				0.1
 
+if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/include/panels/AddSkills.asp")) {
+	
+	
+	document.getElementById("MINE_ID").value = "WSF CURRAGH";
+	addGlobalStyle('input[type="file"] {width:400px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px;}');
+
+	
+	
+}
