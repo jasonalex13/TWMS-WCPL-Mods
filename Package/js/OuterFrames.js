@@ -14,7 +14,7 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.as
 	addGlobalStyle("body {background-image: none; background-color:#333333;}");
 	addGlobalStyle("h3, h4 {color:"+ CurModAccentColor +";}");
 	
-	$('body').append("<div ID='backcontainer'><button id='backbutton' class='btn btn-mini btn-warning'>Back</button><button id='fwdbutton' class='btn btn-mini btn-info'>Fwd</button><span id='jlxVersion'>Curragh Mod "+jlxVersioning()+"</span></div>");
+	$('body').append("<div ID='backcontainer'><button id='backbutton' class='btn btn-mini btn-warning'>Back</button><button id='fwdbutton' class='btn btn-mini btn-info'>Fwd</button><span id='jlxVersion'><span>Curragh Mod</span> "+jlxVersioning()+"</span></div>");
 	addGlobalStyle("#backcontainer {position:absolute;top:0px;left:10px;}");
 	addGlobalStyle("#jlxVersion {color:#c4c4c4;font-size:10px;padding-left:5px;} #jlxVersion span {color:"+ CurModAccentColor +";}");
 	
