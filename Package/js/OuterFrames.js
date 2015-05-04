@@ -6,7 +6,7 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		0.1
+// VERSION		0.2
 
 if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.asp")) {
 	var TWMSimgURL = chrome.extension.getURL("images/TWMS-heart.png");
