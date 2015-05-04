@@ -4,7 +4,12 @@
 // AUTHOR		Jason Hill <info@jasonalex.net>
 // COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// VERSION		1.0.0
+// VERSION		1.3.1
+
+function jlxVersioning() {
+	// this is the overall version of the TWMS-Mod (per the manifest)
+	return "v1.3.1";
+}
 
 // Code to encode URLs
 function urlencode(str) {
@@ -93,8 +98,8 @@ function addGlobalStyle(css) {
 var redflagimgURL = chrome.extension.getURL("images/redflag.png");
 var validimgURL = chrome.extension.getURL("images/valid.png");
 var invalidimgURL = chrome.extension.getURL("images/invalid.png");
-var TWMSimgURL = chrome.extension.getURL("images/TWMS-heart.png");
+var warningimgURL = chrome.extension.getURL("images/warning.png");
 $('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/redflag.gif', redflagimgURL); });
 $('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/valid.png', validimgURL); });
-$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/invalid.png', invalidimgURL); });	
-$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/DMSl.png', TWMSimgURL); });
+$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/invalid.png', invalidimgURL); });
+$('img').prop('src', function(_,src) { return src.replace('https://' + currentDomain + '/damstra/images/warning.png', warningimgURL); });
