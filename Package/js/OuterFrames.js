@@ -6,7 +6,7 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		0.2
+// VERSION		0.3
 
 if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.asp")) {
 	var TWMSimgURL = chrome.extension.getURL("images/TWMS-heart.png");
@@ -22,7 +22,7 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.as
 		window.history.back();
 	});
 	
-	document.getElementById("backbutton").addEventListener('click',function(){
+	document.getElementById("fwdbutton").addEventListener('click',function(){
 		window.history.forward();
 	});
 }
