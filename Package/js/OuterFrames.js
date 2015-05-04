@@ -16,7 +16,7 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.as
 	
 	$('body').append("<div ID='backcontainer'><button id='backbutton' class='btn btn-mini btn-warning'>Back</button><button id='fwdbutton' class='btn btn-mini btn-info'>Fwd</button><span id='jlxVersion'>Curragh Mod "+jlxVersioning()+"</span></div>");
 	addGlobalStyle("#backcontainer {position:absolute;top:0px;left:10px;}");
-	addGlobalStyle("#jlxVersion {color:#c4c4c4;font-size:10px;padding-left:5px;}");
+	addGlobalStyle("#jlxVersion {color:#c4c4c4;font-size:10px;padding-left:5px;} #jlxVersion span {color:"+ CurModAccentColor +";}");
 	
 	document.getElementById("backbutton").addEventListener('click',function(){
 		window.history.back();
