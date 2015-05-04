@@ -30,5 +30,6 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.as
 if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/menu1.asp") || currentPageURL == urlencode("https://" + currentDomain + "/damstra/menu2.asp")  ) {
 	addGlobalStyle("body, #topDiv {background-image: none; background-color:#333333 !important;}");	
 	addGlobalStyle("li.nav-header {color:#ffffff !important;}");
-	addGlobalStyle("li a:link, li a:visited {color:#ffffff !important;} li a:hover, li a:active {background-color:"+ CurModAccentColor +" !important;color:#333333 !important;}")
+	addGlobalStyle("li a:link, li a:visited {color:#ffffff !important;} li a:hover, li a:active {background-color:"+ CurModAccentColor +" !important;color:#333333 !important;}");
+	addGlobalStyle("ul.dropdown-menu li a:link, ul.dropdown-menu li a:visited {color:#333333 !important;}");
 }
