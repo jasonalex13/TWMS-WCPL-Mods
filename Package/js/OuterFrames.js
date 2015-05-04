@@ -6,7 +6,7 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		0.3
+// VERSION		0.2
 
 if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.asp")) {
 	var TWMSimgURL = chrome.extension.getURL("images/TWMS-heart.png");
@@ -19,11 +19,11 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.as
 	addGlobalStyle("#jlxVersion {color:#c4c4c4;font-size:10px;padding-left:5px;} #jlxVersion span {color:"+ CurModAccentColor +";}");
 	
 	document.getElementById("backbutton").addEventListener('click',function(){
-		window.history.back();
+		window.history.go(-1);
 	});
 	
 	document.getElementById("fwdbutton").addEventListener('click',function(){
-		window.history.forward();
+		window.history.go(1);
 	});
 }
 
