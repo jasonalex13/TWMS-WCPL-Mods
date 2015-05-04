@@ -11,6 +11,9 @@ function jlxVersioning() {
 	return "v1.3.1";
 }
 
+var CurModAccentColor = "#ff51b1"
+addGlobalStyle(".CurModAccentColor {color:"+ CurModAccentColor +";} .CurModAccentBG {background-color:"+ CurModAccentColor +";}");
+
 // Code to encode URLs
 function urlencode(str) {
   //       discuss at: http://phpjs.org/functions/urlencode/
