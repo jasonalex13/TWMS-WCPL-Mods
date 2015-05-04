@@ -4,11 +4,11 @@
 // AUTHOR		Jason Hill <info@jasonalex.net>
 // COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// VERSION		1.3.1
+// VERSION		1.3.2
 
 function jlxVersioning() {
 	// this is the overall version of the TWMS-Mod (per the manifest)
-	return "v1.3.1";
+	return "v1.3.2";
 }
 
 var CurModAccentColor = "#ff51b1"
