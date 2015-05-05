@@ -6,7 +6,7 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		1.2
+// VERSION		1.2.1
 
 //FUNCTION FOR SHOWING HIDING NON-REJECTED ITEMS
 
@@ -31,8 +31,8 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkp
 	$('img').prop('src', function(_,src) { return src.replace("https://" + currentDomain + "/damstra/images/document_attachment.png", attachmentimgURL); });
 	
 	
-	var PaperworkPriorityDropdown = document.getElementById("Priority")
-	var PaperworkPriority = 0
+	var PaperworkPriorityDropdown = document.getElementById("Priority");
+	var PaperworkPriority = 0;
 	
 	function setPriorityBoxColor() {
 		if (PaperworkPriority == 1) {
@@ -57,9 +57,10 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkp
 	if(getCookie("PaperworkPriority") != "")
 	{
 		document.getElementById("Priority").value = getCookie("PaperworkPriority");
+		PaperworkPriority = document.getElementById("Priority").value
 	}
 	
-	setPriorityBoxColor()
+	setPriorityBoxColor();
 	
 	// add a button for hiding everything that isn't rejected
 	var RejectedCheckboxNode = document.createElement("label");
