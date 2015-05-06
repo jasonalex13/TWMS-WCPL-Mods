@@ -32,12 +32,12 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/skills.asp
 	
 		
 	// Date of Birth
-	dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font:nth-child(6) > i').text();
+	dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text();
 	var year=Number(dob.substr(6,4));
 	var month=Number(dob.substr(3,2))-1;
 	var day=Number(dob.substr(0,2));
 	var today=new Date();
 	var age=today.getFullYear()-year;
 	if(today.getMonth()<month || (today.getMonth()==month && today.getDate()<day)){age--;}
-	$('#header > table > tbody > tr > td:nth-child(1) > div > font:nth-child(6) > i').after("<span class='jlxAge'> ("+ age +" years old)</span>")
+	$('#header > table > tbody > tr > td:nth-child(1) > div > font > i').after("<span class='jlxAge'> ("+ age +" years old)</span>")
 }
