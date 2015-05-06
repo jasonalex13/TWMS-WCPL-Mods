@@ -8,7 +8,7 @@
 
 function jlxVersioning() {
 	// this is the overall version of the TWMS-Mod (per the manifest)
-	return "v1.3.5";
+	return "v1.3.5.1";
 }
 
 var CurModAccentColor = "#ff51b1"
