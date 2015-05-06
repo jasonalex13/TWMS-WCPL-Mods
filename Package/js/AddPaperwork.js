@@ -92,7 +92,8 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkp
 	addGlobalStyle('th {display:none;}');
 	addGlobalStyle('td:nth-child(2){width:200px;} td:nth-child(3){width:90px;} td:nth-child(4){display:none;} td:nth-child(5){width:400px;} td:nth-child(6),td:nth-child(7),td:nth-child(8){width:150px;}');
 	addGlobalStyle('table.table-bordered tr:nth-child(n+7) td {border-top:1px solid #a7a9ac;}');
-	addGlobalStyle('.alert-info {display:none;}')
+	addGlobalStyle('.alert-info {display:none;}');
+	addGlobalStyle('#bs-modal-div {width:900px !important; left:100px;}');
 
 	$('table tr td:nth-child(8)').each(function(){
 	   if ($(this).text().trim() != '' && $(this).text() != 'Rejected') {
@@ -105,4 +106,6 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/paperworkp
 		setCookie("PaperworkPriority",PaperworkPriority,1);
 		setPriorityBoxColor();
 	});
+	
+	$('#bs-modal-div').width(900);
 }
