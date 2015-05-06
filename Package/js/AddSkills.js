@@ -6,16 +6,16 @@
 //
 // PRE-REQ				base.js
 //
-// VERSION				0.19
+// VERSION				0.22
 	
 if(currentPageURL.toLowerCase() == urlencode("https://" + currentDomain + "/damstra/include/panels/AddSkills.asp").toLowerCase() || currentPageURL == urlencode("https://www.damstra.com.au/damstra/paperworkportal.asp")) {
-	console.log("0.19");
 	//just enable all the fields we want from the start
 	$("#NOTES").css('display','');
 	$("#AS_OF").css('display','');
 	$("#expdate").css('display','');
 	$("#skilllevel").css('display','');
 	$("#attach1").css('display','');
+	document.getElementById("skilllevel").value = "Competent";
 	
 	var MineSelector = document.getElementById("MINE_ID");
 	var BeginDateField = document.getElementById("AS_OF");
@@ -28,10 +28,21 @@ if(currentPageURL.toLowerCase() == urlencode("https://" + currentDomain + "/dams
 	MineSelector.value = "WSF CURRAGH";
 	MineSelector.blur();
 	
-	ExpDateField.addEventListener("blur",function(){
-		document.getElementById("skilllevel").value = "Competent";
+	$('#frm_skill > table > tbody > tr:nth-child(3) > td:nth-child(2)').append("<a id='yesterdatebtn' class='btn btn-warning btn-mini'><i class='icon-white icon-calendar'></i> Yesterday's Date</a>")
+	
+	$('a#yesterdatebtn').click(function(){	
+		var jlxd = new Date();
+		var jlxm = (jlxd.getMonth()+1);
+		if (jlxm < 10) { jlxm = '0' + jlxm; } 
+		$('#AS_OF').val(jlxd.getDate()-1 + '/' + jlxm + '/' + jlxd.getFullYear());
+		$('#AS_OF').focus();
+		$('#NOTES').focus();
 	});
-	BeginDateField.addEventListener("blur",function(){
-		document.getElementById("skilllevel").value = "Competent";	
+	
+	$('#frm_skill > table > tbody > tr:nth-child(3) > td:nth-child(2) > a').click(function(){
+		$('#AS_OF').focus();
+		$('#NOTES').focus();
 	});
+
+	
 }
