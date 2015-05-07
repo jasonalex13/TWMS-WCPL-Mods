@@ -6,7 +6,7 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		1.3
+// VERSION		1.4
 
 if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/skills.asp")) {
 	addGlobalStyle("body > table:nth-child(18) > tbody > tr > td > table > tbody > tr > td:nth-child(6), body > table:nth-child(18) > tbody > tr > td > table > thead > tr > th:nth-child(5) {display:none;}");
@@ -34,7 +34,7 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/skills.asp
 	
 		
 	// Date of Birth
-	dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text().split;
+	dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text().split("/");
 	var year=Number(dob[2]);
 	var month=Number(dob[1])-1;
 	var day=Number(dob[0]);
