@@ -25,8 +25,10 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/skills.asp
 	$('img#bigProfilePic').hide();
 	
 	$('img.pull-right').hover(function(){
+		$('img#bigProfilePic').stop();
 		$('img#bigProfilePic').show(400);
 	},function(){
+		$('img#bigProfilePic').stop();
 		$('img#bigProfilePic').hide(400);
 	});
 	
