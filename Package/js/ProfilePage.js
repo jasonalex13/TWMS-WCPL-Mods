@@ -21,21 +21,21 @@ if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/skills.asp
 	$('td').prop('bgColor', function(_,bgColor) {return bgColor.replace('#CCFFFF','#FFF8C5'); });
 	$('img').prop('src', function(_,src) { return src.replace("https://" + currentDomain + "/damstra/images/document_attachment.png", attachmentimgURL); });	
 	
-	$('body').append("<img id='bigProfilePic' src='"+ $('img.pull-right').prop('src') +"' />")
-	$('img#bigProfilePic').hide()
+	$('body').append("<img id='bigProfilePic' src='"+ $('img.pull-right').prop('src') +"' />");
+	$('img#bigProfilePic').hide();
 	
 	$('img.pull-right').hover(function(){
-		$('img#bigProfilePic').show(400)
+		$('img#bigProfilePic').show(400);
 	},function(){
-		$('img#bigProfilePic').hide(400)
+		$('img#bigProfilePic').hide(400);
 	});
 	
 		
 	// Date of Birth
-	dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text();
-	var year=Number(dob.substr(6,4));
-	var month=Number(dob.substr(3,2))-1;
-	var day=Number(dob.substr(0,2));
+	dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text().split;
+	var year=Number(dob[2]);
+	var month=Number(dob[1])-1;
+	var day=Number(dob[0]);
 	var today=new Date();
 	var age=today.getFullYear()-year;
 	if(today.getMonth()<month || (today.getMonth()==month && today.getDate()<day)){age--;}
