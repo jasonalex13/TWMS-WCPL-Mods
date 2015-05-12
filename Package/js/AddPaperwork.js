@@ -88,7 +88,7 @@ var FuncAddPaperwork = function() {
 			ShowOnlyRejectedFunction(JSON.parse(getCookie("ShowOnlyRejected")));
 		}
 		
-		//addGlobalStyle('input[type="file"] {width:1000px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px;}');
+		addGlobalStyle('label[for="ShowCompleted"], label#ShowOnlyRejectedLabel {width:200px;}')
 		addGlobalStyle('input[type="file"] {width:1000px;background-color:'+CurModAccentLighterColor+'; border:1px solid'+CurModAccentColor+'; padding: 10px;}');
 		addGlobalStyle('select#Priority {height:30px;}')
 		addGlobalStyle('input#DESC1, input#DESC2, input#DESC3, input#DESC4, input#DESC5 {display:none;}');
