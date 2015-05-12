@@ -4,13 +4,13 @@
 // AUTHOR		Jason Hill <info@jasonalex.net>
 // COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// VERSION		1.3.5.4
+// VERSION		1.4.1
 
 callback = $.Callbacks();
 
 function jlxVersioning() {
 	// this is the overall version of the TWMS-Mod (per the manifest)
-	return "v1.4.0";
+	return "v1.4.1";
 }
 
 function shadeColor2(color, percent) {   
