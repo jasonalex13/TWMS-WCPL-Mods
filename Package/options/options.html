@@ -1,0 +1,60 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>TWMS-WCPL-Mods Options</title>
+	<style>
+		div.option {padding:7px; border-bottom:#333333 solid 2px;}
+		div.option:nth-child(even) {background-color:#EDEDED;}
+		div.heading {background-color:#333333;color:#EEEEEE;font-size:20px;padding:5px 10px 5px 10px;}
+		button#save {margin:5px;}
+		.disabled {display:none;}
+	</style>
+</head>
+<body>
+<div class="heading">Theme</div>
+<div class="option">
+	<label>
+		<input type="checkbox" id="EnableTheme"> Enable Theme?
+	</label>
+</div>
+<div class="option">
+Accent Color:
+	<select id="AccentColor">
+		<option value="#c70ff4">Purple</option>
+		<option value="#ff51b1">Pink</option>
+		<option value="#27b6f4">Blue</option>
+		<option value="#86f214">Lime</option>
+		<option value="#f7830f">Orange</option>
+		<option value="#f4114d">Red</option>
+	</select>
+</div>
+
+<div class="option">	
+Theme:
+	<select id="Theme">
+		<option value="dark">Dark</option>
+		<option value="light">Light</option>
+		<option value="colorful">Colourful</option>
+	</select>
+</div>
+
+<div class="heading">Extra Features</div>
+
+<div class="option">
+	<label>
+		<input type="checkbox" id="BackFwd"> Show Back/Fwd Buttons
+	</label>
+</div>
+
+<div class="option">
+	<label>
+		<input type="checkbox" id="AgeCalc"> Calculate age next to DOB on profile pages.
+	</label>
+</div>
+
+
+<button id="save">Save</button>
+<div id="status"></div>
+<script src="options.js"></script>
+</body>
+</html>
