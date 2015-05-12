@@ -24,6 +24,7 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
+
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
     EnableTheme: true,
@@ -34,6 +35,7 @@ function restore_options() {
   }, function(items) {
     document.getElementById('EnableTheme').checked = items.EnableTheme;
     document.getElementById('AccentColor').value = items.AccentColor;
+	document.getElementById('AccentDiv').style.backgroundColor = items.AccentColor;
 	document.getElementById('Theme').value = items.Theme;
 	document.getElementById('BackFwd').checked = items.BackFwd;
 	document.getElementById('AgeCalc').checked = items.AgeCalc;
@@ -42,3 +44,6 @@ function restore_options() {
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click',
     save_options);
+document.getElementById('AccentColor').addEventListener('change',function(){
+	document.getElementById('AccentDiv').style.backgroundColor = this.options[this.selectedIndex].value;
+});
