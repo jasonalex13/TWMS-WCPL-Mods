@@ -33,16 +33,18 @@ var FuncProfilePage = function(){
 			$('img#bigProfilePic').hide(400);
 		});
 		
-			
+		console.log(CurOptAgeCalc);
 		// Date of Birth
-		dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text().split("/");
-		var year=Number(dob[2]);
-		var month=Number(dob[1])-1;
-		var day=Number(dob[0]);
-		var today=new Date();
-		var age=today.getFullYear()-year;
-		if(today.getMonth()<month || (today.getMonth()==month && today.getDate()<day)){age--;}
-		$('#header > table > tbody > tr > td:nth-child(1) > div > font > i').after("<span class='jlxAge'> ("+ age +" years old)</span>")
+		if(CurOptAgeCalc){
+			dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text().split("/");
+			var year=Number(dob[2]);
+			var month=Number(dob[1])-1;
+			var day=Number(dob[0]);
+			var today=new Date();
+			var age=today.getFullYear()-year;
+			if(today.getMonth()<month || (today.getMonth()==month && today.getDate()<day)){age--;}
+			$('#header > table > tbody > tr > td:nth-child(1) > div > font > i').after("<span class='jlxAge'> ("+ age +" years old)</span>")
+		}
 	}
 }
 

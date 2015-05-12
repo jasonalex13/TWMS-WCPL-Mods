@@ -14,6 +14,10 @@ function jlxVersioning() {
 }
 
 var CurModAccentColor = "#ff51b1"
+var CurModPrimaryColor = "#333333"
+var CurModSecondaryColor = "#d1d1d1"
+var CurOptAgeCalc = true;
+var CurOptBackFwd = true;
 
 chrome.storage.sync.get({
     EnableTheme: true,
@@ -23,6 +27,16 @@ chrome.storage.sync.get({
 	AgeCalc: true
   }, function(items) {
 	CurModAccentColor = items.AccentColor;
+	
+	if(items.Theme == "dark"){
+		CurModPrimaryColor = "#333333";
+		CurModSecondaryColor = "#d1d1d1";
+	} else if (items.Theme == "light"){
+		CurModPrimaryColor = "#e0e0e0";
+		CurModSecondaryColor = "#4c4c4c";
+	}
+	CurOptBackFwd = items.BackFwd;
+	CurOptAgeCalc = items.AgeCalc;
 	callback.fire();
   });
 
