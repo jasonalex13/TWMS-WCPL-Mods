@@ -22,7 +22,7 @@ var FuncAddSkills = function() {
 		var BeginDateField = document.getElementById("AS_OF");
 		var ExpDateField = document.getElementById("expdate");
 		
-		addGlobalStyle('input[type="file"] {width:480px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px; font-size:11px;}');
+		addGlobalStyle('input[type="file"] {width:480px;background-color:'+CurModAccentLighterColor+';border:1px solid '+CurModAccentColor+'; padding: 10px; font-size:11px;}');
 		addGlobalStyle('#frm_skill > table > tbody > tr:nth-child(8) {display:none;}');
 		addGlobalStyle('#frm_skill > table > tbody > tr > td:nth-child(1) {width:85px !important;}');
 		MineSelector.setAttribute("onchange","InitSkills(this.value);");

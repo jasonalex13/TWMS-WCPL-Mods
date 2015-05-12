@@ -27,8 +27,8 @@ function ShowOnlyRejectedFunction(checkval) {
 }
 
 
-var FuncAddPaperwork = function(){
-	if(currentPageURL.toLowerCase() == urlencode("https://" + currentDomain + "/damstra/paperworkportal.asp")) {
+var FuncAddPaperwork = function() {
+	if(currentPageURL.toLowerCase() == urlencode("https://" + currentDomain + "/damstra/paperworkportal.asp").toLowerCase()) {
 		var attachmentimgURL = chrome.extension.getURL("images/docattachment.png");
 		$('img').prop('src', function(_,src) { return src.replace("https://" + currentDomain + "/damstra/images/document_attachment.png", attachmentimgURL); });
 		
@@ -88,7 +88,8 @@ var FuncAddPaperwork = function(){
 			ShowOnlyRejectedFunction(JSON.parse(getCookie("ShowOnlyRejected")));
 		}
 		
-		addGlobalStyle('input[type="file"] {width:1000px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px;}');
+		//addGlobalStyle('input[type="file"] {width:1000px;background-color:rgb(227,242,217);border:1px solid #7ac143; padding: 10px;}');
+		addGlobalStyle('input[type="file"] {width:1000px;background-color:'+CurModAccentLighterColor+'; border:1px solid'+CurModAccentColor+'; padding: 10px;}');
 		addGlobalStyle('select#Priority {height:30px;}')
 		addGlobalStyle('input#DESC1, input#DESC2, input#DESC3, input#DESC4, input#DESC5 {display:none;}');
 		addGlobalStyle('th {display:none;}');

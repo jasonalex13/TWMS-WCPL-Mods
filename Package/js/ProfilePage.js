@@ -33,7 +33,6 @@ var FuncProfilePage = function(){
 			$('img#bigProfilePic').hide(400);
 		});
 		
-		console.log(CurOptAgeCalc);
 		// Date of Birth
 		if(CurOptAgeCalc){
 			dob = $('#header > table > tbody > tr > td:nth-child(1) > div > font > i').text().split("/");
