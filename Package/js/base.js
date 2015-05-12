@@ -6,13 +6,31 @@
 //
 // VERSION		1.3.5.4
 
+callback = $.Callbacks();
+
 function jlxVersioning() {
 	// this is the overall version of the TWMS-Mod (per the manifest)
-	return "v1.3.5.4";
+	return "v1.4.0";
 }
 
 var CurModAccentColor = "#ff51b1"
+
+chrome.storage.sync.get({
+    EnableTheme: true,
+    AccentColor: '#ff51b1',
+	Theme: 'dark',
+	BackFwd: true,
+	AgeCalc: true
+  }, function(items) {
+	CurModAccentColor = items.AccentColor;
+	callback.fire();
+  });
+
+
+var FuncBase = function(){
 addGlobalStyle(".CurModAccentColor {color:"+ CurModAccentColor +";} .CurModAccentBG {background-color:"+ CurModAccentColor +";}");
+}
+callback.add(FuncBase);
 
 // Code to encode URLs
 function urlencode(str) {
