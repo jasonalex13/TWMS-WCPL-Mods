@@ -4,13 +4,14 @@
 // AUTHOR		Jason Hill <info@jasonalex.net>
 // COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// VERSION		1.4.3
+// VERSION		1.4.4
 
 callback = $.Callbacks();
+var manifestData = chrome.runtime.getManifest();
 
 function jlxVersioning() {
 	// this is the overall version of the TWMS-Mod (per the manifest)
-	return "v1.4.3";
+	return manifestData.version;
 }
 
 function shadeColor2(color, percent) {   
