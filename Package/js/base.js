@@ -26,6 +26,7 @@ function blendColors(c0, c1, p) {
 var CurModAccentColor = "#ff51b1"
 var CurModPrimaryColor = "#333333"
 var CurModSecondaryColor = "#d1d1d1"
+var CurModTheme = "dark";
 var CurOptAgeCalc = true;
 var CurOptBackFwd = true;
 var CurOptEnableTheme = true;
@@ -45,13 +46,16 @@ chrome.storage.sync.get({
 	if(CurOptEnableTheme == false) {
 		CurModAccentColor = "#333333";
 	} else if(items.Theme == "dark"){
+		CurModTheme = "dark";
 		CurModPrimaryColor = "#333333";
 		CurModSecondaryColor = "#d1d1d1";
 	} else if (items.Theme == "light"){
+		CurModTheme = "light";
 		CurModPrimaryColor = "#e0e0e0";
 		CurModSecondaryColor = "#4c4c4c";
 	} else if (items.Theme = "colorful"){
 		CurModPrimaryColor = items.AccentColor;
+		CurModTheme = "colorful";
 		CurModSecondaryColor = "#ffffff";
 		CurModAccentColor = "#333333";
 	}
