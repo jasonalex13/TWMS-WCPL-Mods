@@ -7,11 +7,11 @@
 // VERSION		1.4.4
 
 callback = $.Callbacks();
-var manifestData = chrome.app.getDetails();
+var manifestData = chrome.runtime.getManifest();
 
 function jlxVersioning() {
 	// this is the overall version of the TWMS-Mod (per the manifest)
-	return manifestdata.version;
+	return manifestData.version;
 }
 
 function shadeColor2(color, percent) {   
