@@ -16,10 +16,9 @@ var FuncProfilePage = function(){
 		addGlobalStyle("body > table:nth-child(18) > tbody > tr > td > table > tbody > tr > td:nth-child(13), body > table:nth-child(18) > tbody > tr > td > table > thead > tr > th:nth-child(8) {width:200px !important;}");
 		addGlobalStyle("img#bigProfilePic {position:fixed;bottom:10px;left:10px;box-shadow:0px 0px 10px #333333;border:1px solid #333333}");
 		addGlobalStyle("span.jlxAge { color:"+ CurModAccentColor +";font-style:italic;}")
-
+		
 		//They use blue buttons on this page so i'm going to make the attachment icon white
 		var attachmentimgURL = chrome.extension.getURL("images/docattachmentwhite.png");
-		$('td').prop('bgColor', function(_,bgColor) {return bgColor.replace('#CCFFFF','#FFF8C5'); });
 		$('img').prop('src', function(_,src) { return src.replace("https://" + currentDomain + "/damstra/images/document_attachment.png", attachmentimgURL); });	
 		
 		$('body').append("<img id='bigProfilePic' src='"+ $('img.pull-right').prop('src') +"' />");
