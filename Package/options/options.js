@@ -2,12 +2,21 @@
 function save_options() {
   var EnableTheme = document.getElementById('EnableTheme').checked;
   var AccentColor = document.getElementById('AccentColor').value;
+  var AccentColorCustom = document.getElementById('AccentColorCustom').value;
+  var AccentColorCustomBool = false;
   var ThemeDL = document.getElementById('Theme').value;
   var BackFwd = document.getElementById('BackFwd').checked;
   var AgeCalc = document.getElementById('AgeCalc').checked;
+  
+  if (AccentColor == "custom") {
+  	AccentColorCustomBool = true;
+  	AccentColor = AccentColorCustom;
+  }
+  
   chrome.storage.sync.set({
-    EnableTheme: EnableTheme,
-    AccentColor: AccentColor,
+	EnableTheme: EnableTheme,
+	AccentColor: AccentColor,
+	AccentColorCustom: AccentColorCustomBool,
 	Theme: ThemeDL,
 	BackFwd: BackFwd,
 	AgeCalc: AgeCalc
@@ -29,12 +38,18 @@ function restore_options() {
   chrome.storage.sync.get({
     EnableTheme: true,
     AccentColor: '#ff51b1',
+    AccentColorCustom: false,
 	Theme: 'dark',
 	BackFwd: true,
 	AgeCalc: true
   }, function(items) {
-    document.getElementById('EnableTheme').checked = items.EnableTheme;
-    document.getElementById('AccentColor').value = items.AccentColor;
+	document.getElementById('EnableTheme').checked = items.EnableTheme;
+	if (items.AccentColorCustom) {
+		document.getElementById('AccentColor').value = "custom";
+		document.getElementById('AccentColorCustom').value = items.AccentColor;
+	} else {
+		document.getElementById('AccentColor').value = items.AccentColor;
+	}
 	document.getElementById('AccentDiv').style.backgroundColor = items.AccentColor;
 	document.getElementById('Theme').value = items.Theme;
 	document.getElementById('BackFwd').checked = items.BackFwd;
