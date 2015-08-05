@@ -1,10 +1,10 @@
 {
 	"manifest_version": 2,
 	"name": "WCPL-TWMS Mods",
-	"version": "1.4.4",
-	 
+	"version": "1.4.5",
+
 	"author": "jasonalex",
-	
+
 	"description": "Modifications to the TWMS front-end for WCPL users",
 	"icons": { "16": "icons/icon16.png",
               "32": "icons/icon32.png",
@@ -18,7 +18,7 @@
       "js": ["js/jquery-2.1.3.min.js","js/base.js","js/AddPaperwork.js","js/ProfilePage.js","js/AddSkills.js","js/OuterFrames.js"]
     }
 	],
-	
+
 	"page_action":{
 		"default_icon":{
 			"19": "icons/icon19.png",
@@ -26,16 +26,16 @@
 			},
 		"default_title": "WCPL TWMS"
 	},
-	
+
 	"permissions":[
 		"storage"
 	],
-	
+
 	"options_ui": {
 		"page": "options/options.html",
 		"chrome_style": true
 	},
-	
+
 	"web_accessible_resources": [
 		"images/*.png",
 		"images/*.svg",

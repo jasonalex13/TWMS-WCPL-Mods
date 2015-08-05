@@ -1,13 +1,31 @@
-// Saves options to chrome.storage.sync.
+function GoodColor(color)
+{
+   var color2="";
+   var result=true;
+   var e=document.getElementById('AccentDiv');
+   e.style.backgroundColor="";
+   e.style.backgroundColor=color;
+   color2=e.style.backgroundColor;
+   if (color2.length==0){result=false;}
+   return result;
+}
+
 function save_options() {
   var EnableTheme = document.getElementById('EnableTheme').checked;
   var AccentColor = document.getElementById('AccentColor').value;
   var ThemeDL = document.getElementById('Theme').value;
   var BackFwd = document.getElementById('BackFwd').checked;
   var AgeCalc = document.getElementById('AgeCalc').checked;
+
+
+
+  if(!GoodColor(AccentColor)) {
+    AccentColor = "#DDDDDD";
+  }
+
   chrome.storage.sync.set({
-    EnableTheme: EnableTheme,
-    AccentColor: AccentColor,
+	EnableTheme: EnableTheme,
+	AccentColor: AccentColor,
 	Theme: ThemeDL,
 	BackFwd: BackFwd,
 	AgeCalc: AgeCalc
@@ -25,16 +43,17 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
 
-  // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
     EnableTheme: true,
     AccentColor: '#ff51b1',
-	Theme: 'dark',
-	BackFwd: true,
-	AgeCalc: true
+    AccentColorCustom: false,
+    Theme: 'dark',
+    BackFwd: true,
+    AgeCalc: true
   }, function(items) {
-    document.getElementById('EnableTheme').checked = items.EnableTheme;
-    document.getElementById('AccentColor').value = items.AccentColor;
+	document.getElementById('EnableTheme').checked = items.EnableTheme;
+	document.getElementById('AccentColor').value = items.AccentColor;
+  	document.getElementById('AccentColorPicker').value = items.AccentColor;
 	document.getElementById('AccentDiv').style.backgroundColor = items.AccentColor;
 	document.getElementById('Theme').value = items.Theme;
 	document.getElementById('BackFwd').checked = items.BackFwd;
@@ -44,6 +63,12 @@ function restore_options() {
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click',
     save_options);
-document.getElementById('AccentColor').addEventListener('change',function(){
+document.getElementById('AccentColorPicker').addEventListener('change',function(){
 	document.getElementById('AccentDiv').style.backgroundColor = this.options[this.selectedIndex].value;
+	document.getElementById('AccentColor').value = this.options[this.selectedIndex].value;
+});
+
+document.getElementById('AccentColor').addEventListener('change', function() {
+	document.getElementById('AccentDiv').style.backgroundColor = this.value;
+  document.getElementById('AccentColorPicker').value = this.value;
 });
