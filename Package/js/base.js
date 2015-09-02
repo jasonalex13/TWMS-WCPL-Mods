@@ -4,7 +4,7 @@
 // AUTHOR		Jason Hill <info@jasonalex.net>
 // COPYRIGHT		Copyright (C) 2015, by Jason Hill <info@jasonalex.net>
 //
-// VERSION		1.4.4
+// VERSION		1.4.6
 
 callback = $.Callbacks();
 var manifestData = chrome.runtime.getManifest();
@@ -14,7 +14,7 @@ function jlxVersioning() {
 	return manifestData.version;
 }
 
-function shadeColor2(color, percent) {   
+function shadeColor2(color, percent) {
     var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
     return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
 }
@@ -43,7 +43,7 @@ chrome.storage.sync.get({
 	CurOptBackFwd = items.BackFwd;
 	CurOptAgeCalc = items.AgeCalc;
 	CurOptEnableTheme = items.EnableTheme;
-	
+
 	if(CurOptEnableTheme == false) {
 		CurModAccentColor = "#333333";
 	} else if(items.Theme == "dark"){
@@ -60,8 +60,12 @@ chrome.storage.sync.get({
 		CurModSecondaryColor = "#ffffff";
 		CurModAccentColor = "#333333";
 	}
-	
+
 	CurModAccentLighterColor = shadeColor2(CurModAccentColor,0.9);
+	
+	// theme striped tables site-wide
+	addGlobalStyle('.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {background-color:'+CurModAccentLighterColor+'}');
+
 	callback.fire();
   });
 
