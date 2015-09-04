@@ -111,6 +111,12 @@ var FuncAddPaperwork = function() {
 			setPriorityBoxColor();
 		});
 
+		document.getElementById("ShowOnlyRejected").addEventListener('change',function(){
+			if($(this).prop('checked')){
+				$('#ShowCompleted').attr('checked',true);
+			}
+		});
+
 		$('#bs-modal-div').width(900);
 	}
 }
