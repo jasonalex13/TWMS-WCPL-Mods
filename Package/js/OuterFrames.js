@@ -6,7 +6,7 @@
 //
 // PRE-REQ		base.js
 //
-// VERSION		0.2
+// VERSION		0.3
 
 var FuncOuterFrames = function(){
 	if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/heading.asp")) {
@@ -48,6 +48,19 @@ var FuncOuterFrames = function(){
 	if(currentPageURL == urlencode("https://" + currentDomain + "/damstra/menu1.asp") || currentPageURL == urlencode("https://" + currentDomain + "/damstra/menu2.asp")  ) {
 		if(CurOptEnableTheme){
 			addGlobalStyle("body, #topDiv {background-image: none; background-color:"+CurModPrimaryColor+" !important;} li.nav-header {color:"+CurModSecondaryColor+" !important;} li a:link, li a:visited {color:"+CurModSecondaryColor+" !important;} li a:hover, li a:active {background-color:"+ CurModAccentColor +" !important;color:"+CurModPrimaryColor+" !important;} ul.dropdown-menu li a:link, ul.dropdown-menu li a:visited {color:#333333 !important;} ul.dropdown-menu li a:hover, ul.dropdown-menu li a:active {color:"+ CurModPrimaryColor +" !important;}");
+			if(CurModTheme == "light") {
+				$('i').toggleClass('icon-white icon-black');
+				$('a').hover(function(){
+					$(this).children('i').toggleClass('icon-black icon-white');
+				}
+				);
+			} else if (CurModTheme == "dark") {
+				$('a').hover(function(){
+					$(this).children('i').toggleClass('icon-white icon-black');
+				}
+				);
+			}
+			
 		}
 	}
 }
